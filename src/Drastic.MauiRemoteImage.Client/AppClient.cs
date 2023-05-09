@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Drastic.MauiRemoteImage.Messages;
@@ -67,6 +69,29 @@ public class AppClient
         this.logger?.LogInformation($"Connect");
     }
 
+    /// <summary>
+    /// Send a screenshot to the server.
+    /// </summary>
+    /// <param name="screenshot">Screenshot.</param>
+    public async Task SendScreenshot(Models.Screenshot screenshot)
+    {
+        var message = new OnScreenshotResponseMessage() { ScreenShots = new Models.Screenshot[1] { screenshot } };
+        await this.SendMessageAsync(message);
+    }
+
+    /// <summary>
+    /// Send screenshots to the server.
+    /// </summary>
+    /// <param name="screenshots">Screenshots.</param>
+    public async Task SendScreenshots(IEnumerable<Models.Screenshot> screenshots)
+    {
+        var message = new OnScreenshotResponseMessage() { ScreenShots = screenshots };
+        await this.SendMessageAsync(message);
+    }
+
+    /// <summary>
+    /// Send all windows screenshots to the server.
+    /// </summary>
     public async Task SendScreenshots()
     {
         var app = Microsoft.Maui.Controls.Application.Current;
@@ -78,7 +103,7 @@ public class AppClient
         await app.Dispatcher.DispatchAsync(async () =>
         {
             var screenshots = await Task.WhenAll(app.Windows.Select(n => VisualDiagnostics.CaptureAsPngAsync(n)!));
-            var fun = screenshots.Select(n => new Screenshot() { Name = Guid.NewGuid().ToString(), Image = n });
+            var fun = screenshots.Select(n => new Models.Screenshot() { Name = Guid.NewGuid().ToString(), Image = n });
             var message = new OnScreenshotResponseMessage() { ScreenShots = fun};
             await this.SendMessageAsync(message);
         });
