@@ -7,7 +7,7 @@
     <UseMaui>true</UseMaui>
     <Description>The App Client for MauiRemoteImage.</Description>
     <IsPackable>true</IsPackable>
-    <PackageTags>image hash skiasharp</PackageTags>
+    <PackageTags>remote image capture screenshot maui</PackageTags>
   </PropertyGroup>
   
   <ItemGroup>

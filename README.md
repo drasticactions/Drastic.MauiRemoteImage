@@ -2,6 +2,8 @@
 
 Drastic.MauiRemoteImage is a server/client application that lets you remotely take screenshots of MAUI apps.
 
+![example](https://user-images.githubusercontent.com/898335/237056888-3e2851e7-a857-4d8e-9668-1bb129eb0069.gif)
+
 ## Setup Server
 
 To setup the server, build the `Drastic.MauiRemoteImage.Server` application. Once built, run the app and follow the prompts to set your Network Interface and Port.
