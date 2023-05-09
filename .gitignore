@@ -4,6 +4,7 @@
 external/Drastic.FlipperKit/build/
 src/Frameworks
 nuget/
+.meteor/
 
 .DS_Store
 

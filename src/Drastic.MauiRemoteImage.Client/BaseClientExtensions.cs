@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using Drastic.MauiRemoteImage.Messages;
 
 namespace Drastic.MauiRemoteImage.Client;
