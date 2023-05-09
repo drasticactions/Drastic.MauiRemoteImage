@@ -3,19 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drastic.MauiRemoteImage.Server", "Drastic.MauiRemoteImage.Server\Drastic.MauiRemoteImage.Server.csproj", "{C08BE669-FFE7-40D5-A7FE-3FAA6CC98D93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drastic.MauiRemoteImage.Server", "Drastic.MauiRemoteImage.Server\Drastic.MauiRemoteImage.Server.csproj", "{C08BE669-FFE7-40D5-A7FE-3FAA6CC98D93}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Drastic.MauiRemoteImage", "Drastic.MauiRemoteImage\Drastic.MauiRemoteImage.shproj", "{74D15175-3593-45D8-AB94-A0EE75921EF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drastic.MauiRemoteImage.Client", "Drastic.MauiRemoteImage.Client\Drastic.MauiRemoteImage.Client.csproj", "{F84E9DDD-D960-443C-BBFE-461BF8995314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drastic.MauiRemoteImage.Client", "Drastic.MauiRemoteImage.Client\Drastic.MauiRemoteImage.Client.csproj", "{F84E9DDD-D960-443C-BBFE-461BF8995314}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C08BE669-FFE7-40D5-A7FE-3FAA6CC98D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -26,5 +23,16 @@ Global
 		{F84E9DDD-D960-443C-BBFE-461BF8995314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F84E9DDD-D960-443C-BBFE-461BF8995314}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F84E9DDD-D960-443C-BBFE-461BF8995314}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C25FADCF-0BF0-417A-BBBE-84994F286D5C}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Drastic.MauiRemoteImage\Drastic.MauiRemoteImage.projitems*{74d15175-3593-45d8-ab94-a0ee75921ef7}*SharedItemsImports = 13
+		Drastic.MauiRemoteImage\Drastic.MauiRemoteImage.projitems*{c08be669-ffe7-40d5-a7fe-3faa6cc98d93}*SharedItemsImports = 5
+		Drastic.MauiRemoteImage\Drastic.MauiRemoteImage.projitems*{f84e9ddd-d960-443c-bbfe-461bf8995314}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

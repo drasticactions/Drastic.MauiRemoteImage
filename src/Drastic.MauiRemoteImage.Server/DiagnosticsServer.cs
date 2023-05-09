@@ -32,7 +32,8 @@ public class DiagnosticsServer : TempestServer
     {
         foreach (var item in obj.Message.ScreenShots)
         {
-            var filename = $"{obj.Message.Id}-{item.Name}.png";
+            var outputName = !string.IsNullOrEmpty(item.Name) ? item.Name : obj.Message.Id;
+            var filename = $"{outputName}.png";
             var output = Path.Combine(this.outputDirectory, filename);
             File.WriteAllBytes(output, item.Image);
             this.logger?.LogInformation($"Saved {output}");
