@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drastic.MauiRemoteImageSample", "Drastic.MauiRemoteImageSample.csproj", "{9A9419B5-DFEB-4713-B830-DB921B77C299}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drastic.MauiRemoteImage.Client", "..\..\src\Drastic.MauiRemoteImage.Client\Drastic.MauiRemoteImage.Client.csproj", "{6004B51A-CA15-4ED4-8E08-182050F2FCE9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Drastic.MauiRemoteImage", "..\..\src\Drastic.MauiRemoteImage\Drastic.MauiRemoteImage.shproj", "{74D15175-3593-45D8-AB94-A0EE75921EF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A9419B5-DFEB-4713-B830-DB921B77C299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9419B5-DFEB-4713-B830-DB921B77C299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9419B5-DFEB-4713-B830-DB921B77C299}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9A9419B5-DFEB-4713-B830-DB921B77C299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9419B5-DFEB-4713-B830-DB921B77C299}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9419B5-DFEB-4713-B830-DB921B77C299}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6004B51A-CA15-4ED4-8E08-182050F2FCE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6004B51A-CA15-4ED4-8E08-182050F2FCE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6004B51A-CA15-4ED4-8E08-182050F2FCE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6004B51A-CA15-4ED4-8E08-182050F2FCE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+EndGlobal
