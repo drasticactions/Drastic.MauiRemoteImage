@@ -9,8 +9,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Drastic.MauiRemoteImage", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drastic.MauiRemoteImage.Client", "Drastic.MauiRemoteImage.Client\Drastic.MauiRemoteImage.Client.csproj", "{F84E9DDD-D960-443C-BBFE-461BF8995314}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drastic.MauiRemoteImage.Build", "Drastic.MauiRemoteImage.Build\Drastic.MauiRemoteImage.Build.csproj", "{D67000C0-15B5-45E7-9E06-3B09DEF404F0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,10 +23,6 @@ Global
 		{F84E9DDD-D960-443C-BBFE-461BF8995314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F84E9DDD-D960-443C-BBFE-461BF8995314}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F84E9DDD-D960-443C-BBFE-461BF8995314}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D67000C0-15B5-45E7-9E06-3B09DEF404F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D67000C0-15B5-45E7-9E06-3B09DEF404F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D67000C0-15B5-45E7-9E06-3B09DEF404F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D67000C0-15B5-45E7-9E06-3B09DEF404F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

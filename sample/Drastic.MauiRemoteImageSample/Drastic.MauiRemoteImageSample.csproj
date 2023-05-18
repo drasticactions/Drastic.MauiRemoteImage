@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="../../src/Drastic.MauiRemoteImage.Build/Drastic.MauiRemoteImage.Build.targets" />
 	<PropertyGroup>
 		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
@@ -49,12 +48,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Drastic.LocalNetworkAddresses" Version="1.0.10" />
 		<PackageReference Include="Drastic.Utilities" Version="1.0.10" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\src\Drastic.MauiRemoteImage.Build\Drastic.MauiRemoteImage.Build.csproj" />
 	  <ProjectReference Include="..\..\src\Drastic.MauiRemoteImage.Client\Drastic.MauiRemoteImage.Client.csproj" />
 	</ItemGroup>
 

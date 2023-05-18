@@ -1,4 +1,5 @@
 ﻿using Drastic.MauiRemoteImage.Client;
+using Drastic.Tempest;
 using Drastic.Tools;
 using Microsoft.Extensions.Logging;
 
@@ -12,13 +13,35 @@ public partial class App : Application
 	{
 		InitializeComponent();
 		var logger = provider.GetService<ILogger>();
-		var ip = "";
-		if (string.IsNullOrEmpty(ip))
+		Task.Run(async () =>
 		{
-			throw new ArgumentNullException("You must set the IP Address for the client to connect!");
-		}
-		this.client = new AppClient("TestClient", logger);
-		this.client.ConnectAsync(new Drastic.Tempest.Target(ip, 8888)).FireAndForgetSafeAsync();
+			
+			var ips = Drastic.LocalNetworkAddresses.RemoteNetworkAddresses.GetLocalMachineAddresses();
+			this.client = new AppClient("TestClient", logger);
+			var isConnected = false;
+			foreach (var ip in ips)
+			{
+				try
+				{
+					var result = await this.client.ConnectAsync(new Target(ip, 8888));
+					if (result.Result == ConnectionResult.Success)
+					{
+						isConnected = true;
+						break;
+					}
+				}
+				catch (Exception e)
+				{
+					System.Diagnostics.Debug.WriteLine(e);
+					throw;
+				}
+			}
+
+			if (!isConnected)
+			{
+				throw new ArgumentException("Could not connect to the server. Is it running?");
+			}
+		}).FireAndForgetSafeAsync();
 		MainPage = new AppShell();
 	}
 }
